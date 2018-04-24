@@ -1,33 +1,33 @@
 //
-//  ViewController.swift
+//  ViewController_oc.swift
 //  MLScanControl
 //
-//  Created by Mrlu on 22/01/2018.
+//  Created by Mrlu on 2018/4/24.
 //  Copyright © 2018 Mrlu. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController_oc: UIViewController {
 
     private var scanControl:MLScanControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        scanControl = MLScanControl(frame: view.bounds, style:.alipay)
+        scanControl = MLScanControl(frame: view.bounds, style:MLScanStyleAlipay)
         scanControl.offsetY = -100
         view.addSubview(scanControl)
         scanControl.result { (result) -> (Void) in
             if let _ = result {
                 let alertVC = UIAlertController(title: "温馨提示", message: result, preferredStyle: UIAlertControllerStyle.alert)
-                alertVC.addAction(UIAlertAction(title: "知道了", style: UIAlertActionStyle.cancel, handler: { (action) in
-                    
+                alertVC.addAction(UIAlertAction(title: "知道了", style: UIAlertActionStyle.cancel, handler: { [weak self](action) in
+                    self?.scanControl.start()
                 }))
                 UIApplication.shared.keyWindow?.rootViewController?.present(alertVC, animated: true, completion: nil)
             }
         }
-        
+
         self.scanControl.start()
     }
     
@@ -44,12 +44,10 @@ class ViewController: UIViewController {
         super.viewWillDisappear(animated)
         self.scanControl.stop()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-

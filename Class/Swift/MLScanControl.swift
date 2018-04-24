@@ -33,6 +33,7 @@ class MLScanControl: UIControl {
     var offsetY:CGFloat = 0
     private var resultClosure:ResultClosure?
     private var zoomTemp:CGFloat = 0
+    var isSoundEnable:Bool = false
     
     init(frame: CGRect, style:MLScanStyle = .weChat) {
         super.init(frame: frame)
@@ -247,9 +248,10 @@ class MLScanControl: UIControl {
     }
     
     private func showErrorAlertView() {
-        let alertVC = UIAlertController(title: "温馨提示", message: "请您设置允许该应用访问您的相机\n设置>隐私>相机", preferredStyle: UIAlertControllerStyle.alert)
-        alertVC.addAction(UIAlertAction(title: "知道了", style: UIAlertActionStyle.cancel, handler: { (action) in
-            
+        let alertVC = UIAlertController(title: "温馨提示", message: "请您设置允许该应用访问您的相机", preferredStyle: UIAlertControllerStyle.alert)
+        alertVC.addAction(UIAlertAction(title: "去设置", style:
+            UIAlertActionStyle.cancel, handler: { (action) in
+                UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
         }))
         UIApplication.shared.keyWindow?.rootViewController?.present(alertVC, animated: true, completion: nil)
     }
@@ -303,6 +305,10 @@ extension MLScanControl: AVCaptureVideoDataOutputSampleBufferDelegate {
 //MARK - util
 extension MLScanControl {
     private func playSound() {
+        
+        guard self.isSoundEnable else {
+            return
+        }
         //播放声音
         guard let soundPath = Bundle(path: MLScanControl.bundlePath())?.path(forResource: "sound/noticeMusic.caf", ofType: nil) else { return }
         guard let soundUrl = NSURL(string: soundPath) else { return }
