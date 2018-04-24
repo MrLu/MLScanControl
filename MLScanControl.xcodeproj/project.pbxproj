@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08A4DDFB208DB9270004F540 /* MLScanFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A4DDFA208DB9270004F540 /* MLScanFrameView.m */; };
-		08A4DDFE208DB9690004F540 /* MLScanControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 08A4DDFD208DB9690004F540 /* MLScanControl.m */; };
-		08A4DE05208EFF990004F540 /* ViewController_oc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4DE04208EFF990004F540 /* ViewController_oc.swift */; };
+		08A4DE09208F184F0004F540 /* MLScanControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4DE07208F184F0004F540 /* MLScanControl.swift */; };
+		08A4DE0A208F184F0004F540 /* MLScanFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4DE08208F184F0004F540 /* MLScanFrameView.swift */; };
+		08A4DE0C208F18590004F540 /* ViewController_swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A4DE0B208F18590004F540 /* ViewController_swift.swift */; };
 		08FF8D672015C58E0028DF49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FF8D662015C58E0028DF49 /* AppDelegate.swift */; };
 		08FF8D6C2015C58E0028DF49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08FF8D6A2015C58E0028DF49 /* Main.storyboard */; };
 		08FF8D6E2015C58E0028DF49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FF8D6D2015C58E0028DF49 /* Assets.xcassets */; };
@@ -19,12 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		08A4DDF8208DB9270004F540 /* MLScanControl-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MLScanControl-Bridging-Header.h"; sourceTree = "<group>"; };
-		08A4DDF9208DB9270004F540 /* MLScanFrameView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLScanFrameView.h; sourceTree = "<group>"; };
-		08A4DDFA208DB9270004F540 /* MLScanFrameView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLScanFrameView.m; sourceTree = "<group>"; };
-		08A4DDFC208DB9690004F540 /* MLScanControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLScanControl.h; sourceTree = "<group>"; };
-		08A4DDFD208DB9690004F540 /* MLScanControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLScanControl.m; sourceTree = "<group>"; };
-		08A4DE04208EFF990004F540 /* ViewController_oc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController_oc.swift; sourceTree = "<group>"; };
+		08A4DE07208F184F0004F540 /* MLScanControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLScanControl.swift; sourceTree = "<group>"; };
+		08A4DE08208F184F0004F540 /* MLScanFrameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLScanFrameView.swift; sourceTree = "<group>"; };
+		08A4DE0B208F18590004F540 /* ViewController_swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_swift.swift; sourceTree = "<group>"; };
 		08FF8D632015C58E0028DF49 /* MLScanControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLScanControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08FF8D662015C58E0028DF49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08FF8D6B2015C58E0028DF49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -47,16 +44,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08A4DDFF208DB96F0004F540 /* OC */ = {
+		08A4DE06208F184F0004F540 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				08A4DDF8208DB9270004F540 /* MLScanControl-Bridging-Header.h */,
-				08A4DDF9208DB9270004F540 /* MLScanFrameView.h */,
-				08A4DDFA208DB9270004F540 /* MLScanFrameView.m */,
-				08A4DDFC208DB9690004F540 /* MLScanControl.h */,
-				08A4DDFD208DB9690004F540 /* MLScanControl.m */,
+				08A4DE07208F184F0004F540 /* MLScanControl.swift */,
+				08A4DE08208F184F0004F540 /* MLScanFrameView.swift */,
 			);
-			path = OC;
+			path = Swift;
 			sourceTree = "<group>";
 		};
 		08FF8D5A2015C58E0028DF49 = {
@@ -81,7 +75,7 @@
 			children = (
 				08FF8D782015C6960028DF49 /* Class */,
 				08FF8D662015C58E0028DF49 /* AppDelegate.swift */,
-				08A4DE04208EFF990004F540 /* ViewController_oc.swift */,
+				08A4DE0B208F18590004F540 /* ViewController_swift.swift */,
 				08FF8D6A2015C58E0028DF49 /* Main.storyboard */,
 				08FF8D6D2015C58E0028DF49 /* Assets.xcassets */,
 				08FF8D6F2015C58E0028DF49 /* LaunchScreen.storyboard */,
@@ -93,7 +87,7 @@
 		08FF8D782015C6960028DF49 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				08A4DDFF208DB96F0004F540 /* OC */,
+				08A4DE06208F184F0004F540 /* Swift */,
 				08FF8D7A2015C6960028DF49 /* MLScan.bundle */,
 			);
 			path = Class;
@@ -181,10 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08A4DDFB208DB9270004F540 /* MLScanFrameView.m in Sources */,
+				08A4DE0C208F18590004F540 /* ViewController_swift.swift in Sources */,
+				08A4DE0A208F184F0004F540 /* MLScanFrameView.swift in Sources */,
 				08FF8D672015C58E0028DF49 /* AppDelegate.swift in Sources */,
-				08A4DE05208EFF990004F540 /* ViewController_oc.swift in Sources */,
-				08A4DDFE208DB9690004F540 /* MLScanControl.m in Sources */,
+				08A4DE09208F184F0004F540 /* MLScanControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
